@@ -39,13 +39,13 @@ This bot is packed with advanced logic to appear "human":
 Download the project as a ZIP or use Git to clone it:
 
 ```bash
-git clone [https://github.com/yourbestregard/minecraft-afk-bot.git](https://github.com/yourbestregard/minecraft-afk-bot.git)
+git clone https://github.com/yourbestregard/minecraft-afk-bot.git
 ```
 
 ### 2. Navigate to Project Folder
 
 ```bash
-cd YourRepoName
+cd minecraft-afk-bot
 ```
 
 ### 3. Install Dependencies
