@@ -39,33 +39,36 @@ This bot is packed with advanced logic to appear "human":
 Download the project as a ZIP or use Git to clone it:
 
 ```bash
-git clone [https://github.com/yourbestregard/minecraft-afk-bot.git](https://github.com/yourbestregard/minecraft-afk-bot.git)```
+git clone [https://github.com/yourbestregard/minecraft-afk-bot.git](https://github.com/yourbestregard/minecraft-afk-bot.git)
+```
 
 ### 2. Navigate to Project Folder
 
 ```bash
-cd YourRepoName```
+cd YourRepoName
+```
 
 ### 3. Install Dependencies
 
 Run this command to install **mineflayer** and **mineflayer-pathfinder**:
 
 ```bash
-npm install```
+npm install
+```
 
 ### 4. Configure the Bot
 
-Open **config.json** and edit it to match your server details. The file is commented to guide you.
+Open `config.json` and edit it to match your server details. The file is commented to guide you.
 
 | Key  | Description | Example |
 | ------------- | ------------- | ------------- |
-| **serverHost**  | Your server's IP or domain.  | "server.aternos.me"  |
-| **serverPort**  | The server's port. Use 25565 if unsure.  | 49215  |
-| **serverVersion**  | **REQUIRED!** The server's Minecraft version.  | "1.20.1"  |
-| **botUsername**  | The name your bot will use in-game.  | "ServerGuard"  |
-| **viewDistance**  | Bot's view distance (optional, 1 is fine).  | 1  |
+| `serverHost`  | Your server's IP or domain.  | "server.aternos.me"  |
+| `serverPort`  | The server's port. Use 25565 if unsure.  | 49215  |
+| `serverVersion`  | **REQUIRED!** The server's Minecraft version.  | "1.20.1"  |
+| `botUsername`  | The name your bot will use in-game.  | "ServerGuard"  |
+| `viewDistance`  | Bot's view distance (optional, 1 is fine).  | 1  |
 
-**IMPORTANT:** You **must** set **serverVersion** correctly. Auto-detection often fails with hosting services like Aternos and will cause a protocol error.
+**IMPORTANT:** You `must` set `serverVersion` correctly. Auto-detection often fails with hosting services like Aternos and will cause a protocol error.
 
 ---
 
@@ -74,7 +77,8 @@ Open **config.json** and edit it to match your server details. The file is comme
 Once configured, start the bot from your terminal:
 
 ```bash
-npm start```
+npm start
+```
 
 The bot will attempt to connect. If the server is online, it will join and start its AFK routine. If the server is offline, it will wait 5 minutes before retrying.
 
@@ -94,5 +98,5 @@ This means you are free to use, copy, modify, and distribute this code for perso
 
 This project is licensed under the **MIT License.**
 
-- (Mineflayer)[https://github.com/PrismarineJS/mineflayer]
-- (Mineflayer-Pathfinder)[https://github.com/PrismarineJS/mineflayer-pathfinder]
+- [Mineflayer](https://github.com/PrismarineJS/mineflayer)
+- [Mineflayer-Pathfinder](https://github.com/PrismarineJS/mineflayer-pathfinder)
