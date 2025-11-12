@@ -21,6 +21,7 @@ This bot is packed with advanced logic to appear "human":
     * **In-Game Disconnect:** If kicked, timed out, or the server restarts, the bot automatically tries to reconnect every **10 seconds**.
     * **Server Offline:** If the bot is started while the server is offline, it will retry every **5 minutes** to avoid spamming connection attempts.
 * 🧊 **Connection Watchdog:** Includes an internal "watchdog" to detect frozen connections (silent timeouts). If the server stops responding, the bot will force a reconnect.
+* ⏱️ **Proactive Reconnect:** Automatically disconnects and reconnects every 3 hours to simulate a real player taking a break. This clears memory and avoids suspicion from a single, uninterrupted 24/7 session.
 * 🔧 **Easy Configuration:** All key settings are managed in a single, well-commented `config.json` file.
 
 ---

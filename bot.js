@@ -26,6 +26,10 @@ const RECONNECT_FAIL_DELAY = 300000; // 5 minutes
 // Time to wait for a server tick before assuming a frozen connection
 const WATCHDOG_TIMEOUT = 45000;    // 45 seconds
 
+// Proactive reconnect timer to simulate a player taking a break.
+// 3 hours = 3 * 60 * 60 * 1000 = 10,800,000 milliseconds
+const SESSION_DURATION = 10800000; // 3 hours
+
 // --- 3. GLOBAL HELPER ---
 
 /**
@@ -286,6 +290,13 @@ function createAndRunBot() {
     // Start the connection watchdog
     console.log('[System] Watchdog started.');
     resetWatchdog();
+
+    // Proactive 3-Hour Reconnect (Human-like behavior)
+    console.log(`[System] Session timer started. Bot will proactively reconnect in ${SESSION_DURATION / 1000 / 60 / 60} hours.`);
+    setTimeout(() => {
+      console.log('[System] Proactive 3-hour session timer elapsed. Triggering a reconnect...');
+      bot.end('proactive_session_reconnect'); // 'end' event will call handleDisconnect
+    }, SESSION_DURATION);
   });
 
   /**
